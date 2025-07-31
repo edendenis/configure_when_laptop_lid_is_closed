@@ -47,6 +47,20 @@ sudo systemctl daemon-reload
 sudo systemctl enable --now configure_when_laptop_lid_is_closed.service
 ```
 
+## Pergunta sobre outras explicações
+
+Durante um diálogo anterior surgiu a dúvida: "No repo existem todas essas explicações?"
+
+O repositório possui apenas um guia básico de instalação. O arquivo `README.md` descreve como copiar o script e habilitar o serviço do `systemd` conforme visto nas linhas 24‑35:
+
+```bash
+sudo install -m 755 configure_when_laptop_lid_is_closed.sh /usr/local/bin/
+sudo cp configure_when_laptop_lid_is_closed.service /etc/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl enable --now configure_when_laptop_lid_is_closed.service
+```
+
+Além dessas etapas de instalação, não há no repositório explicações detalhadas sobre ajustes do `logind`, `UPower` ou outras alternativas.
 ## Referencias
 
 [1] OPENAI. ***Como instalar configure_when_laptop_lid_is_closed no Linux Ubuntu:*** https://chatgpt.com/c/688af8ea-d364-8321-a2d3-ab76e79015e1. ChatGPT. Acessado em: 31/07/2025.
